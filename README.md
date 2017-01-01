@@ -1,2 +1,2 @@
 # heron-tweets
-Twitter stream analytics with Heron
+Twitter stream analytics using Heron
