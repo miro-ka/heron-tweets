@@ -7,6 +7,8 @@ import org.apache.storm.tuple.Fields;
 import org.warnup.heron.tweets.bolt.CountBolt;
 import org.warnup.heron.tweets.bolt.ParseTweetBolt;
 import org.warnup.heron.tweets.bolt.ReportBolt;
+import org.warnup.heron.tweets.dto.InputConfigDto;
+import org.warnup.heron.tweets.internal.JsonConfigParser;
 import org.warnup.heron.tweets.spout.TwitterSpout;
 
 
@@ -16,6 +18,14 @@ import java.util.Properties;
 public class TweetsTopology {
 
     public static void main(String[] args) throws Exception {
+
+        JsonConfigParser config = new JsonConfigParser();
+        final InputConfigDto configData = config.read();
+
+        if(configData == null){
+            System.out.println("Config file (config.json) is missing!");
+            return;
+        }
 
 
         TopologyBuilder builder = new TopologyBuilder();

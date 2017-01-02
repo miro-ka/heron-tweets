@@ -1,0 +1,27 @@
+{
+  "items": [
+    {
+      "streamItemId": 1,
+      "streamkKeywords": [
+        "news",
+        "breaking",
+        "finance"
+      ],
+      "twitterIds": [
+        "22100200",
+        "4433322212"
+      ]
+    },
+    {
+      "streamItemId": 2,
+      "streamkKeywords": [
+        "tech",
+        "science"
+      ],
+      "twitterIds": [
+        "444555",
+        "77788811"
+      ]
+    }
+  ]
+}
